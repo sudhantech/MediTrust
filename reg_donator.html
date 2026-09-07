@@ -1,0 +1,351 @@
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Medical Fundraising</title>
+  <meta name="description" content="Free Bootstrap Theme by BootstrapMade.com">
+  <meta name="keywords" content="free website templates, free bootstrap themes, free template, free bootstrap, free website template">
+
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway|Candal">
+  <link rel="stylesheet" type="text/css" href="../static/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+  <!-- =======================================================
+    Theme Name: Medilab
+    Theme URL: https://bootstrapmade.com/medilab-free-medical-bootstrap-theme/
+    Author: BootstrapMade.com
+    Author URL: https://bootstrapmade.com
+  ======================================================= -->
+   <style>
+    .banner-text h1 {
+      font-size: 48px;
+      font-weight: bold;
+    }
+    .feature-box {
+      padding: 30px;
+      background: #f8f9fa;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      transition: 0.3s;
+    }
+    .feature-box:hover {
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      transform: translateY(-5px);
+    }
+    .workflow-step {
+      padding: 15px;
+      text-align: center;
+      font-weight: bold;
+    }
+  </style>
+<script language="javascript">
+function validate()
+{
+	if(document.form1.name.value=="")
+	{
+	alert("Enter the Name");
+	document.form1.name.focus();
+	return false;
+	}
+	
+	if(document.form1.mobile.value=="")
+	{
+	alert("Enter the Mobile No.");
+	document.form1.mobile.focus();
+	return false;
+	}
+	if(isNaN(document.form1.mobile.value))
+	{
+	alert("Invalid Mobile No.");
+	document.form1.mobile.select();
+	return false;
+	}
+	if(document.form1.mobile.value.length!=10)
+	{
+	alert("Mobile No. must be 10 digits!");
+	document.form1.mobile.select();
+	return false;
+	}
+	if(document.form1.email.value=="")
+	{
+	alert("Enter the Email");
+	document.form1.email.focus();
+	return false;
+	}
+	if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(document.form1.email.value))  
+	{
+	
+	}
+	else
+	{
+	alert("Invalid E-mail!");
+	document.form1.email.select();
+	return false;
+	}
+	
+	if(document.form1.city.value=="")
+	{
+	alert("Enter the City");
+	document.form1.city.focus();
+	return false;
+	}
+	if(document.form1.description.value=="")
+	{
+	alert("Enter the Description");
+	document.form1.description.focus();
+	return false;
+	}
+	if(document.form1.uname.value=="")
+	{
+	alert("Enter the Username");
+	document.form1.uname.focus();
+	return false;
+	}
+	const form = document.form1;
+
+    const pass = form.pass.value;
+    const cpass = form.cpass.value;
+
+    // Password security check (min 8 chars, uppercase, lowercase, digit, special char)
+    const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+
+    // Existing password field empty check
+    if (pass === "") {
+        alert("Enter the Password");
+        form.pass.focus();
+        return false;
+    }
+
+    // New: Password pattern match
+    if (!passwordPattern.test(pass)) {
+        alert("Password must be at least 8 characters long and include:\n- One uppercase letter\n- One lowercase letter\n- One number\n- One special character (@$!%*?&)");
+        form.pass.focus();
+        return false;
+    }
+
+    // Confirm password
+    if (cpass === "") {
+        alert("Enter the Confirm Password");
+        form.cpass.focus();
+        return false;
+    }
+
+    if (pass !== cpass) {
+        alert("Password does not match!");
+        form.cpass.select();
+        return false;
+    }
+return true;
+}
+</script>
+
+</head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+  <!--banner-->
+  <section id="banner" class="banner">
+    <div class="bg-color">
+      <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+          <div class="col-md-12">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				      </button>
+              <a class="navbar-brand" href="/">MediTrust</a>
+            </div>
+            <div class="collapse navbar-collapse navbar-right" id="myNavbar">
+              <ul class="nav navbar-nav">
+                <li class=""><a href="/">Home</a></li>
+                <li class=""><a href="/login">User</a></li>
+                <li class=""><a href="/login_donator">Donator</a></li>
+				<li class=""><a href="/login_admin">Admin</a></li>
+                <!--<li class=""><a href="#testimonial">Admin</a></li>-->
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="container">
+        <div class="row">
+          <div class="banner-info">
+            <div class="banner-logo text-center">
+              <!--<img src="img/logo.png" class="img-responsive">-->
+            </div>
+            <div class="banner-text text-center">
+              <h1 class="white">MediTrust</h1>
+              <p>AI-Driven Medical Fundraising Verification System to Detect and
+Prevent Fraudulent Treatment Requests</p>
+              <a href="#contact" class="btn btn-appoint">Sign In</a>
+            </div>
+            <div class="overlay-detail text-center">
+              <a href="#service"><i class="fa fa-angle-down"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--/ banner-->
+  <!--service-->
+
+  <!--/ service-->
+  <!--cta-->
+
+  <!--cta-->
+  <!--about-->
+
+  <!--/ about-->
+  <!--doctor team-->
+
+  <!--/ doctor team-->
+  <!--testimonial-->
+  <!--cta-->
+  <!--contact-->
+  <section id="contact" class="section-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h2 class="ser-title">Donator</h2>
+          <hr class="botm-line">
+        </div>
+        <div class="col-md-4 col-sm-4">
+          <h3>Medical Fundraising</h3>
+          <div class="space"></div>
+          <p><img src="../static/img/med1.jpg" class="img-responsive"></p>
+        </div>
+        <div class="col-md-8 col-sm-4 marb20">
+          <div class="contact-info">
+            <h3 class="cnt-ttl">Donator - Sign Up here</h3>
+            <div class="space"></div>
+            
+			{% if msg=="success" %}
+			<span style="color:#006600">You are Registered Successfully..</span>
+			<script>
+//Using setTimeout to execute a function after 5 seconds.
+setTimeout(function () {
+   //Redirect with JavaScript
+   window.location.href= '/login_donator';
+}, 2000);
+</script>
+			{% endif %}
+			
+			{% if msg=="fail" %}
+			<span style="color:#FF0000">User already exist!</span>
+			{% endif %}
+			
+			
+            <form name="form1" action="" method="post">
+			<div class="form-group">
+                <input type="text" name="name" class="form-control br-radius-zero" maxlength="20" placeholder="Name" />
+                <div class="validation"></div>
+              </div>
+			  <div class="form-group">
+                <input type="text" name="mobile" class="form-control br-radius-zero" maxlength="10" placeholder="Mobile No." />
+                <div class="validation"></div>
+              </div>
+			  <div class="form-group">
+                <input type="text" name="email" class="form-control br-radius-zero" placeholder="Email" />
+                <div class="validation"></div>
+              </div>
+			  
+			  <div class="form-group">
+                <input type="text" name="city" class="form-control br-radius-zero" placeholder="City" />
+                <div class="validation"></div>
+              </div>
+			  <div class="form-group">
+                <input type="text" name="description" class="form-control br-radius-zero" placeholder="Describe about the Donator" />
+                <div class="validation"></div>
+              </div>
+              <div class="form-group">
+                <input type="text" name="uname" class="form-control br-radius-zero" placeholder="Username" />
+                <div class="validation"></div>
+              </div>
+              <div class="form-group">
+                <input type="password" class="form-control br-radius-zero" name="pass" placeholder="Password" />
+                <div class="validation"></div>
+              </div>
+			  <div class="form-group">
+                <input type="password" class="form-control br-radius-zero" name="cpass" placeholder="Confirm Password" />
+                <div class="validation"></div>
+              </div>
+        
+              <div class="form-action">
+                <button type="submit" class="btn btn-form" onClick="return validate()">Sign In</button>
+              </div>
+			  
+			  
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--/ contact-->
+  <!--footer-->
+  <footer id="footer">
+    <div class="top-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-sm-4 marb20">
+            <div class="ftr-tle">
+              <h4 class="white no-padding">About Us</h4>
+            </div>
+            <div class="info-sec">
+              <p>This system ensures accurate verification of medical
+fund requests, safeguarding donor contributions.</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-4 marb20">
+            <div class="ftr-tle">
+              <h4 class="white no-padding">Quick Links</h4>
+            </div>
+            <div class="info-sec">
+              <ul class="quick-info">
+                <li><a href="/"><i class="fa fa-circle"></i>Home</a></li>
+                <li><a href="/login"><i class="fa fa-circle"></i>User</a></li>
+				<li><a href="/login_donator"><i class="fa fa-circle"></i>Donator</a></li>
+                <li><a href="/login_admin"><i class="fa fa-circle"></i>Admin</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-4 marb20">
+          
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-line">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+           Medical Fundraising
+            <div class="credits">
+              <!--
+                All the links in the footer should remain intact.
+                You can delete the links only if you purchased the pro version.
+                Licensing information: https://bootstrapmade.com/license/
+                Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Medilab
+              -->
+               <a href="https://bootstrapmade.com/"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!--/ footer-->
+
+  <script src="../static/js/jquery.min.js"></script>
+  <script src="../static/js/jquery.easing.min.js"></script>
+  <script src="../static/js/bootstrap.min.js"></script>
+  <script src="../static/js/custom.js"></script>
+  <script src="../static/contactform/contactform.js"></script>
+
+</body>
+
+</html>
